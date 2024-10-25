@@ -1,0 +1,4 @@
+/carrito
+    ├── index.html
+    ├── script.js
+    └── estilos.css

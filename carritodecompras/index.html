@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <center><h1>CARRITO DE COMPRAS</h1>
+
+    <div class="producto" id="producto1">
+        <h2>VESTIDOS</h2>
+        <div class="imagenes">
+            <img src="IMG-20241024-WA0118.jpg" alt="Lado 1" id="img1">
+            <img src="IMG-20241024-WA0117.jpg" alt="Lado 2" id="img2">
+            <img src="atras1.jpg.jpg" alt="Lado 3" id="img3">
+        </div>
+        <div class="botones-imagenes">
+            <button onclick="mostrarImagen('img1', 'producto1')">Frente</button>
+            <button onclick="mostrarImagen('img2', 'producto1')">De Lado</button>
+            <button onclick="mostrarImagen('img3', 'producto1')">Atras</button>
+        </div>
+        <div class="descripcion">
+            <p id="descripcion1" style="display: none;">Vestido casual color rosa</p>
+            <button onclick="toggleDescripcion('descripcion1')">Descripción/Ocultar</button>
+            
+        </div>
+        <div class="precio">
+            <p id="precio1">$250</p>
+            <button onclick="resaltarPrecio('precio1')">Precio</button>
+        </div>
+    </div>
+
+    <div class="producto" id="producto2" style="display: none;">
+        <h2>VESTIDOS</h2>
+        <div class="imagenes">
+            <img src="IMG-20241024-WA0121.jpg" alt="Lado 1" id="img4">
+            <img src="IMG-20241024-WA0119.jpg" alt="Lado 2" id="img5">
+            <img src="IMG-20241024-WA0120.jpg" alt="Lado 3" id="img6">
+        </div>
+        <div class="botones-imagenes">
+            <button onclick="mostrarImagen('img4', 'producto2')">Frente</button>
+            <button onclick="mostrarImagen('img5', 'producto2')">De Lado</button>
+            <button onclick="mostrarImagen('img6', 'producto2')">Atras</button>
+        </div>
+        <div class="descripcion">
+            <p id="descripcion2" style="display: none;">Vestido rosa floreado largo.</p>
+            <button onclick="toggleDescripcion('descripcion2')">Descripción/Ocultar</button>
+           
+        </div>
+        <div class="precio">
+            <p id="precio2">$400</p>
+            <button onclick="resaltarPrecio('precio2')">Precio</button>
+        </div>
+    </div>
+
+    <div class="producto" id="producto3" style="display: none;">
+        <h2>VESTIDOS</h2>
+        <div class="imagenes">
+            <img src="fn.jpg.jpg" alt="Lado 1" id="img7">
+            <img src="lad.jpg.jpg" alt="Lado 2" id="img8">
+            <img src="atr.jpg.jpg" alt="Lado 3" id="img9">
+        </div>
+        <div class="botones-imagenes">
+            <button onclick="mostrarImagen('img7', 'producto3')">Frente</button>
+            <button onclick="mostrarImagen('img8', 'producto3')">De Lado</button>
+            <button onclick="mostrarImagen('img9', 'producto3')">Atras</button>
+        </div>
+        <div class="descripcion">
+            <p id="descripcion3" style="display: none;">Vestido negro lago de tirantes con pierna destapada.</p>
+            <button onclick="toggleDescripcion('descripcion3')">Descripción/Ocultar</button>
+            
+        </div>
+        <div class="precio">
+            <p id="precio3">$489</p>
+            <button onclick="resaltarPrecio('precio3')">Precio</button>
+        </div>
+    </div>
+
+    <div class="producto" id="producto4" style="display: none;">
+        <h2>VESTIDOS</h2>
+        <div class="imagenes">
+            <img src="frent.jpg.jpg" alt="Lado 1" id="img10">
+            <img src="lados.jpg (2).jpg" alt="Lado 2" id="img11">
+            <img src="atras.jpg.jpg" alt="Lado 3" id="img12">
+        </div>
+        <div class="botones-imagenes">
+            <button onclick="mostrarImagen('img10', 'producto4')">Frente</button>
+            <button onclick="mostrarImagen('img11', 'producto4')">De Lado</button>
+            <button onclick="mostrarImagen('img12', 'producto4')">Atras</button>
+        </div>
+        <div class="descripcion">
+            <p id="descripcion4" style="display: none;">Vestido Blanco largo de pierna destapada.</p>
+            <button onclick="toggleDescripcion('descripcion4')">Descripción/Ocultar</button>
+        </div>
+        <div class="precio">
+            <p id="precio4">$569</p>
+            <button onclick="resaltarPrecio('precio4')">Precio</button>
+        </div>
+    </div>
+
+    <div class="menu-imagenes">
+        <label for="selector-imagenes">Selecciona:</label>
+        <select id="selector-imagenes" onchange="cargarImagenSeleccionada()">
+            <option value="producto1">Prenda 1</option>
+            <option value="producto2">Prenda 2</option>
+            <option value="producto3">Prenda 3</option>
+            <option value="producto4">Prenda 4</option>
+        </select>
+    </div></center>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.producto {
+    margin-bottom: 30px;
+}
+
+.imagenes img {
+    display: none; /* Ocultar todas las imágenes por defecto */
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
+.imagenes img:first-child {
+    display: block; /* Muestra la primera imagen por defecto */
+}
+
+.botones-imagenes button,
+.descripcion button,
+.precio button {
+   margin: 10px;
+   color: rgb(116, 43, 226); padding: 10px 10px;
+    cursor: pointer;
+}
+
+.menu-imagenes {
+   color: rgb(174, 0, 255); margin-top: 20px;
+}
