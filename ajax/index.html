@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  float:left;
+  width:20%;
+  text-align:center;
+}
+.menu a {
+  background-color:#bb0ece;
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+  color:black;
+}
+.main {
+  float:left;
+  width:60%;
+  padding:0 20px;
+}
+.right {
+  background-color:#bb0ece;
+  float:left;
+  width:20%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+}
+
+.contenedor{
+  background-color:#bb0ece;
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width:100%;
+  }
+}
+</style>
+<script>
+  
+  function load(){
+    var xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange =function(){
+      if (this.readyState==4 && this.status==200) {
+
+
+        document.getElementById("demo").innerHTML=this.responseText;
+      }
+
+
+    };
+xhttp.open("GET","ejem.txt",true);
+xhttp.send();
+}
+
+function load2(){
+    var xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange =function(){
+      if (this.readyState==4 && this.status==200) {
+        document.getElementById("demo").innerHTML=this.responseText;
+      }
+    };
+
+xhttp.open("GET","ejem2.txt",true);
+xhttp.send();
+}
+</script>
+</head>
+
+<body style="font-family:Verdana;color:#000000;">
+<div class="contenedor">
+  <div  class="header" style="background-color:#bb0ece;padding:15px;text-align:center;">
+    <img src="halados.jpg" style="max-width: 100%;height: auto;">
+  </div>
+  <div style="overflow:auto">
+    <div class="menu">
+      <a href="index.html"><input type="button" value="inicio"></a>
+      <a><input type="button" onclick="load()" value="Acerca de"></a>
+      <a><input type="button" onclick="load2()" value="Misión"></a>
+      
+    </div>
+    <div class="main">
+      <h2>HELADOS MIX</h2>
+      <p id="demo">Bienvenidos a nuestro sitio donde te podemos hablar sobre los helados mas ricos que puedes encontrar😋🍦</p>
+    </div>
+    <div class="right">
+      <h2> <img src="descarga.jpg" style="max-width: 100%;height: auto;"></h2>
+      <p id="demo2"> </p>
+    </div>
+  </div>
+  <footer style="background-color:#bb0ece;text-align:center;padding:10px;margin-top:7px;">Flora Gonzalez Martinez 22690437</footer>
+</div>
+</body>
+
+
+</html>
